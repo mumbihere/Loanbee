@@ -1008,4 +1008,7 @@ textarea::-ms-input-placeholder
 .hypothesis{
     text-align: left;
 }
+p.hypothesis{
+    font-size: 90%;
+}
 
