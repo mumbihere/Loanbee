@@ -231,12 +231,23 @@
                             <div class="row"><div class="col-md-1 bold">H<sub>0</sub>: </div ><div class="col-md-5"> There is no difference in the average number of loans between those who complete loans on time, those who are late and those who default.<br></br></div></div> 
                             <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference between between the average number of loans between those who complete loans on time, those who are late and those who default.<br></br></div></div>               
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>average number of loans (discrete)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  <br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Analysis of variance (ANOVA).  </div></div>
+                            <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> 
+                                Analysis of variance (ANOVA).
+                                <img src="assets/images/results/prev_loans.png">
+                                <img src="assets/images/results/BOXPLOT_3.png"><br>
+                                Means per category: <img style="width:45%;" src="assets/images/results/means_per_group_3.png">
+
+                              </div></div>
                         </div>
                         </div>
                         <div class="col-md-6"><div class="container hypothesis">
-                            <div class="row"><div class="col-md-1 bold">Results:</div><div class="col-md-5">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div></div>
+                            <div class="row"><div class="col-md-1 bold">Results:</div><div class="col-md-5">                           ANOVA Results. <img src="assets/images/results/ANOVA_3.png">
+                              <p>Tukey HSD</p> <img src="assets/images/results/Tukey_HSD_3.png">
+                              <p>Pair-wise t-test</p> <img  style="width:85%;" src="assets/images/results/Pair_3.png">
+                              <p>Effect Size(Omega Squared)</p> <img style="width:35%;" src="assets/images/results/Omega_3.png">
+
+                              <br></br></div></div>
+                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5"> The anova p-value shows that the relationship between average number of previous loans and loan status is highly statistically significant. The Tukey HSD results show us that the significance exists between the means of defaulters and those who paid the loans on time. The overall effect is really  small though(0.016), making this predictor not as strong.</div></div>
                         </div></div>
                   </div>
                 </div>
@@ -259,12 +270,22 @@
                             <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference between between the average number of dependants between those who complete loans on time, those who are late and those who default.<br></br></div></div>
                                             
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>average number of dependants (discrete)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  <br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Analysis of variance (ANOVA).  </div></div>
+                            <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Chi Square test of Independence. 
+                            <img src="assets/images/results/dependants_chi.png">
+                             </div></div>
                         </div>
                         </div>
                         <div class="col-md-6"><div class="container hypothesis">
-                            <div class="row"><div class="col-md-1 bold">Results:</div><div class="col-md-5">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div></div>
+                            <div class="row"><div class="col-md-1 bold">Results:</div><div class="col-md-5">
+                                <img src="assets/images/results/crosstable_1.png">
+                            <p>Chi Squared Results</p>
+                                <img src="assets/images/results/chi-squared_1.png">
+                            <p>Cramer's V</p>
+                                <img style="width:25%" src="assets/images/results/cramersV_1.png">
+
+
+                            </div></div>
+                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5"><p>84% of persons who self-reported as having more than 5 dependants completed the loans on time compared to 62% who reported having no dependants. The p-value of the chi-square test shows some statistical significance, albeit small. The effect is also fairly small, meaning that the predictor is weak (at the moment).</p> </div></div>
                         </div></div>
                   </div>
                 </div>
@@ -289,12 +310,22 @@
                             <div class="row"><div class="col-md-1 bold">H<sub>1</sub> alternative: </div ><div class="col-md-5"> Marital Status is correlated with loan status i.e. whether someone is able to complete loans on time,whether they are late or are in default.<br></br></div></div>
                                             
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>Marital status (binary discrete)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  <br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Chi Square of Independence.  </div></div>
+                            <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Chi Square of Independence. 
+                               <img src="assets/images/results/stacked_column_chart.png">
+                            </div></div>
                         </div>
                         </div>
                         <div class="col-md-6"><div class="container hypothesis">
-                            <div class="row"><div class="col-md-1 bold">Results:</div><div class="col-md-5">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div></div>
+                            <div class="row"><div class="col-md-1 bold">Results:</div><div class="col-md-5">
+
+
+                                <img src="assets/images/results/crosstable_2.png">
+                            <p>Chi Squared Results</p>
+                                <img src="assets/images/results/chi-squared_2.png">
+                            <p>Cramer's V</p>
+                                <img style="width:25%" src="assets/images/results/cramersV_2.png">
+                            </div></div>
+                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5"><br>Persons who self report as married, are  statistically more likely to repay loans on time compared to their unmarried counterparts. The effect size of this association is however weak, at only 0.1025. This is likely to be a fairly weak predictor. </div></div>
                         </div></div>
                   </div>
                 </div>
