@@ -84,7 +84,16 @@
                 <div class="row heading-content"><div class="col-md-12"><h3>Exploratory Analysis</h3></div></div>
     
                 <div class="row"><div class="col-md-2"></div><div class="col-md-8">
-                    <p style="font-size:100%;">This sections shows some attributes of persons whose loans are in default. The data used in this analysis is from <strong>October- December 2017</strong></p>
+                    <p style="font-size:100%;">This sections shows some attributes of persons whose loans are in default. The data used in this analysis is from <strong>October- December 2017</strong>.
+                        <ul>The following are category names used to represent different categories of users.
+                            <li>Complete: -> Those who completed loans on time</li>
+                            <li>Late: -> Those who completed loans on late</li>
+                            <li>Default: -> Those who defaulted on their loans</li>
+
+                        </ul>
+                  </p>
+
+
                     
                 </div><div class="col-md-2"></div></div>
  
@@ -362,7 +371,11 @@
                 <div class="row">
                     <div class="col-md-6"><p>The first credit-scoring algorithm to be employed will be an XGBoost Model. XGBoost is a robust algorithm of combining weak classifiers into stronger ones.</p><img src="assets/images/weak_to_strong.png" style="width:60%;height:60%;">
                         <p>To Learn more about the XGBoost Algorithm please see <a href="http://xgboost.readthedocs.io/en/latest/model.html">this link.</a></p></div>
-                    <div class="col-md-6"><p>Decision Trees are the basic building block of XGBoost such as the example below.</p><img src="assets/images/decision_tree.gif" style="padding-bottom: 30px;"><br></br><p>Loanbee's implementation of XGBoost using sklearn is available <a href="https://github.com/mumbihere/Loanbee/blob/master/classifiers/XGBoost.ipynb">here!</a></p></div>
+                    <div class="col-md-6"><p>Loanbee's implementation of XGBoost using sklearn is available <a href="https://github.com/mumbihere/Loanbee/blob/master/classifiers/XGBoost.ipynb">here!</a></p>
+                        <p>In summary, the model has an accuracy of <strong>68.81%</strong> in distinguishing between complete, late and default categories</p>
+                        <p>Additionally, if we assume we don't consider complete and late as separate categories, we can combine them to one category (non-defaulters). The model has an accuracy of <strong>78.29%</strong> in distinguishing between defaulters and non-defaulters</p>
+
+                    </div>
                 </div>
             </div>
           </section>
