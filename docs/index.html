@@ -84,11 +84,11 @@
                 <div class="row heading-content"><div class="col-md-12"><h3>Exploratory Analysis</h3></div></div>
     
                 <div class="row"><div class="col-md-2"></div><div class="col-md-8">
-                    <p style="font-size:100%;">This sections shows some attributes of persons whose loans are in default. The data used in this analysis is from <strong>October- December 2017</strong>.
-                        <ul>The following are category names used to represent different categories of users.
-                            <li>Complete: -> Those who completed loans on time</li>
-                            <li>Late: -> Those who completed loans on late</li>
-                            <li>Default: -> Those who defaulted on their loans</li>
+                    <p style="font-size:100%;">This sections shows some attributes of persons who have taken loans with us. The data used in this analysis is from <strong>October- December 2017</strong>.
+                        <ul>The following category names are used to represent different categories of users.
+                            <li>Complete: -> Customers who completed loans on time</li>
+                            <li>Late: -> Customers who completed loans on late</li>
+                            <li>Default: -> Customers who defaulted on their loans</li>
 
                         </ul>
                   </p>
@@ -159,7 +159,7 @@
                     <div class="col-md-6" >
                         <div class="container hypothesis">
                             <div class="row"><div class="col-md-1 bold">H<sub>0</sub>: </div ><div class="col-md-5"> There is no difference in the average daily mpesa transaction amount between those who complete loans on time, those who are late and those who default.<br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference between between the average daily mpesa transaction amount between those who complete loans on time, those who are late and those who default.<br></br></div></div>                
+                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference in the average daily mpesa transaction amount between those who complete loans on time, those who are late and those who default.<br></br></div></div>                
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>average daily mpesa transaction amount (Continuous)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  </div></div>
                             <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Analysis of variance (ANOVA).
                                 <img src="assets/images/results/BOXPLOT_1.png"><br>
@@ -200,7 +200,7 @@
                         <div class="col-md-6" >
                         <div class="container hypothesis">
                             <div class="row"><div class="col-md-1 bold">H<sub>0</sub>: </div ><div class="col-md-5"> There is no difference in the average external credit score between those who complete loans on time, those who are late and those who default.<br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference between between the average external credit score between those who complete loans on time, those who are late and those who default.<br></br></div></div>                
+                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference in the average external credit score between those who complete loans on time, those who are late and those who default.<br></br></div></div>                
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>average external credit score (Continuous)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  <br></br></div></div>
                             <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Analysis of variance (ANOVA).
                                 <img src="assets/images/results/BOXPLOT_2.png"><br>
@@ -218,7 +218,7 @@
                               <p>Effect Size(Omega Squared)</p> <img style="width:35%;" src="assets/images/results/Omega_2.png">
 
                             <br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5"><p class="hypothesis">There is no difference in credit score averages between those who complete loans late and those who complete loans on time. There is some difference between those who loans late and those who default, but not as significant as the difference between those who defaulted and those who completed on time. The overall effect size is small.</p></div></div>
+                            <div class="row"><div class="col-md-1 bold">Conclusion</div><div class="col-md-5"><p class="hypothesis">There is no difference in credit score averages between those who complete loans late and those who complete loans on time. There is some difference between those whose loans are late and those who default, but not as significant as the difference between those who defaulted and those who completed on time. The overall effect size is small.</p></div></div>
                         </div></div>
                   </div>
                 </div>
@@ -238,7 +238,7 @@
                     <div class="col-md-6" >
                         <div class="container hypothesis">
                             <div class="row"><div class="col-md-1 bold">H<sub>0</sub>: </div ><div class="col-md-5"> There is no difference in the average number of loans between those who complete loans on time, those who are late and those who default.<br></br></div></div> 
-                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference between between the average number of loans between those who complete loans on time, those who are late and those who default.<br></br></div></div>               
+                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference in the average number of loans between those who complete loans on time, those who are late and those who default.<br></br></div></div>               
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>average number of loans (discrete)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  <br></br></div></div>
                             <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> 
                                 Analysis of variance (ANOVA).
@@ -276,7 +276,7 @@
                     <div class="col-md-6" >
                         <div class="container hypothesis">
                             <div class="row"><div class="col-md-1 bold">H<sub>0</sub>: </div ><div class="col-md-5"> There is no difference in the average number of dependants between those who complete loans on time, those who are late and those who default.<br></br></div></div>
-                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference between between the average number of dependants between those who complete loans on time, those who are late and those who default.<br></br></div></div>
+                            <div class="row"><div class="col-md-1 bold">H<sub>1</sub>: </div ><div class="col-md-5"> There is significant difference in the average number of dependants between those who complete loans on time, those who are late and those who default.<br></br></div></div>
                                             
                             <div class="row"><div class="col-md-1 bold">Variables: </div ><div class="col-md-5"><ol><li>average number of dependants (discrete)</li><li>Loan Status(Categorical - completed_on_time, completed_late,default)</li></ol>  <br></br></div></div>
                             <div class="row"><div class="col-md-1 bold">Test: </div ><div class="col-md-5"> Chi Square test of Independence. 
