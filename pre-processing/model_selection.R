@@ -20,7 +20,7 @@ data = read.csv("../data/loans_oct_dec_2017/combined.csv")
 #Hypothesis 1 -> Mpesa Transactions
 
 #Draw a box plot to visualize the groups.
-boxplot(data$avg_daily_mpesa_txns_amount~data$status,data=mtcars, main="MPesa Transactions for complete, default and late loans", xlab="Group", ylab="Average Daily mPesa Transactions")
+boxplot(data$avg_daily_mpesa_txns_amount~data$status, main="MPesa Transactions for complete, default and late loans", xlab="Group", ylab="Average Daily mPesa Transactions")
 #In addition to the box plot, show means per group
 tapply(data$avg_daily_mpesa_txns_amount, data$status, mean, na.rm=T)
 
@@ -54,7 +54,7 @@ omega_sq(AnovaModel)
 
 #Hypothesis 2 -> External Credit Score
 #Draw a box plot to visualize the groups.
-boxplot(data$credit_score ~data$status,data=mtcars, main="External Credit Score for complete, default and late loans", xlab="Group", ylab="External Credit Score")
+boxplot(data$credit_score ~data$status, main="External Credit Score for complete, default and late loans", xlab="Group", ylab="External Credit Score")
 #In addition to the box plot, show means per group
 tapply(data$credit_score, data$status, mean, na.rm=T)
 
@@ -76,7 +76,7 @@ omega_sq(AnovaModel2)
 
 
 #Hypothesis 3 -> #No of Loans
-boxplot(data$no_of_loans_completed_previously ~data$status,data=mtcars, main="#No of Loans Completed Previously for complete, default and late loans", xlab="Group", ylab="No of Loans Completed Previously")
+boxplot(data$no_of_loans_completed_previously ~data$status, main="#No of Loans Completed Previously for complete, default and late loans", xlab="Group", ylab="No of Loans Completed Previously")
 #In addition to the box plot, show means per group
 tapply(data$no_of_loans_completed_previously, data$status, mean, na.rm=T)
 #We conduct an anova test to compare the means of 3 groups
