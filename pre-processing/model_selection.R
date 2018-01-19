@@ -3,6 +3,13 @@
 library(car)
 library(gmodels)
 library(lsr)
+library(dplyr)
+library(tidyr)
+library(ggthemes)
+library(ggplot2)
+library(scales)
+library(ztable)
+
 
 setwd("/Users/monicah/Desktop/Loanbee/Loanbee/pre-processing/")
 
@@ -69,12 +76,43 @@ omega_sq(AnovaModel2)
 
 
 #Hypothesis 3 -> #No of Loans
+boxplot(data$no_of_loans_completed_previously ~data$status,data=mtcars, main="#No of Loans Completed Previously for complete, default and late loans", xlab="Group", ylab="No of Loans Completed Previously")
+#In addition to the box plot, show means per group
+tapply(data$no_of_loans_completed_previously, data$status, mean, na.rm=T)
+#We conduct an anova test to compare the means of 3 groups
+AnovaModel3 <- aov(no_of_loans_completed_previously ~ status, data=data)
+summary(AnovaModel3)
+#Anova might show that the 3 means are statistically different, but doesnt show which relationships are significant. The Tukey Honest Significant Difference compares all pairs of means to evaluate significance
+TukeyHSD(AnovaModel3, conf.level=0.99)
+
+#As an alternative we can also calculate adjusted p-values using the bonferroni correction. This confirms what we already figured out using Tukey HSD
+pairwise.t.test(data$no_of_loans_completed_previously, data$status, p.adjust.method="bonferroni")
+
+#Omega Squared is used to calculate the overall effect size
+# Suggested interpretations for Omega Squared are: small (.01), medium (.06), and large (.14 or higher)
+omega_sq(AnovaModel3)
+
+
 
 #Hypothesis 4 -> #No of Dependants
+#Do a cross table to better visualize the data.
+CrossTable(data$dependants, data$status, fisher = FALSE) 
+#Conduct the Chi-Test
+cs = chisq.test(data$dependants, data$status)
+cs
+#Check the effect size
+# As a rule of thumb, Cramer's V under .2 is weak, between .2 and .4 is strong and above .4 is very strong
+cramersV(data$dependants, data$status)
+
 
 #Hypothesis 5 -> Marital Status
+#Do a cross table to better visualize the data.
+CrossTable(data$marital, data$status, fisher = FALSE) 
+#Conduct the Chi-Test
+cs = chisq.test(data$marital, data$status)
+cs
+#Check the effect size
+# As a rule of thumb, Cramer's V under .2 is weak, between .2 and .4 is strong and above .4 is very strong
+cramersV(data$marital, data$status)
 
 
-cs = chisq.test(data$Employment, data$status)
-
-summary(data$ave)
